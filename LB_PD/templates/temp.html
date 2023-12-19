@@ -1,18 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>My Site</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon3.ico') }}" type="image/x-icon">
 </head>
-    <body>
-    <h3>Температура LM75: <h1>{{ dataLM }} C</h1>></h3>
-    <h3>Температура DS18B20: <h1>{{ dataDS }} C</h1>></h3>
+<body>
+    <header>
+        <h1>My Site!</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Температура LM75:</h2>
+            <p>{{ dataLM }} &deg;C</p>
+        </section>
+
+        <section>
+            <h2>Температура DS18B20:</h2>
+            <p>{{ dataDS }} &deg;C</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Site.</p>
+    </footer>
 
     <script>
         setTimeout(function(){
-        location.reload();
-         }, 500);
+            location.reload();
+        }, 500);
     </script>
-    </body>
+</body>
 </html>

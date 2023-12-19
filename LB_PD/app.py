@@ -13,7 +13,6 @@ app = Flask(__name__)
 def readTemp():
     global tempLM
     global tempDS
-    temp = '0'
     while True:
         tempLM = ArduinoSerial.readline().rstrip().decode()
         tempDS = ArduinoSerial.readline().rstrip().decode()
